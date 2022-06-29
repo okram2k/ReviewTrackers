@@ -8,7 +8,7 @@ This App was created as part of a coding assignment for ReviewTrackers by Marko 
 
 ### Usage
 
-Upon loading on the landing screen a user can click on each of the review boxes to open up more details about that review. On the review details page a user can press the return arrow to return to the main list, or press the pencil button to open an edit interface. The edit interface has a space for the user to add their response as well as a cancel or save button. The response is only saved if the user hits the save button, if cancel or return are pressed first the response is not saved.
+Upon loading on the landing screen a user can click on each of the review boxes to open up more details about that review. On the review details page a user can press the return arrow to return to the main list, or press the pencil button to open an edit interface. The edit interface has a space for the user to add their response and their name as well as a cancel or save button. The response is only saved if the user hits the save button, if cancel or return are pressed first the response is not saved.
 
 ## Technology
 
