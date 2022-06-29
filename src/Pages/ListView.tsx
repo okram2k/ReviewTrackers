@@ -1,40 +1,40 @@
-import { MouseEvent } from "react";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { toggleShowDetails } from "../features/details/detailsSlice";
+import { updateReview } from "../features/review/reviewSlice";
+import { selReviewList } from "../features/reviewList/reviewListSlice";
 import formatDate from "../helpers/formatDate";
 import { ReactComponent as UserCommentIcon } from "../icons/UserCommentIcon.svg";
-import { ReviewData } from "../types/types";
 import Stars from "./Stars";
+import "./ListView.css";
 
-export default function ListView({
-  reviewListData,
-  selectView,
-}: {
-  reviewListData?: ReviewData[];
-  selectView: (id?: string) => void;
-}) {
-  return reviewListData ? (
+export default function ListView() {
+  const dispatch = useAppDispatch();
+  const reviewList = useAppSelector(selReviewList);
+  return reviewList ? (
     <>
       <div className="list-page">
         <div className="list-grid">
-          {reviewListData?.map((review, index) => (
+          {reviewList?.map((rev, index) => (
             <>
               <div
                 key={index}
                 className="list-card"
                 onClick={() => {
-                  selectView(review.id);
+                  dispatch(updateReview({ ...rev }));
+                  dispatch(toggleShowDetails());
                 }}
               >
-                <div className="list-place">{review.place}</div>
-                <Stars rating={review.rating} />
-                <div className="list-content">{review.content}</div>
+                <div className="list-place">{rev.place}</div>
+                <Stars rating={rev.rating} />
+                <div className="list-content">{rev.content}</div>
                 <div className="list-card-bottom">
-                  <div className="list-author">{review.author}</div>
+                  <div className="list-author">{rev.author}</div>
                   <div className="list-published_at">
-                    {formatDate(review.published_at)}
+                    {formatDate(rev.published_at)}
                   </div>
                 </div>
                 <div className="list-response">
-                  {review.response === "" ? "" : <UserCommentIcon />}
+                  {rev.response ? <UserCommentIcon /> : ""}
                 </div>
               </div>
             </>

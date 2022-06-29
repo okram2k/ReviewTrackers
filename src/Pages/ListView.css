@@ -1,0 +1,77 @@
+.list-place {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.list-author {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.list-published_at {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8d95a3;
+}
+
+.list-card {
+  width: 260px;
+  height: 210px;
+  padding: 20px;
+  background: #fbfcfd;
+  position: relative;
+  text-align: left;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.list-card:hover {
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.75);
+}
+
+.list-content {
+  padding-top: 25px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5d6167;
+}
+
+.list-grid {
+  display: grid;
+  row-gap: 100px;
+  grid-column-gap: 75px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
+.list-card-bottom {
+  column-count: 2;
+  position: absolute;
+  bottom: 20px;
+  white-space: nowrap;
+}
+
+.list-response {
+  color: #0057b3;
+  bottom: 20px;
+  right: 21px;
+  position: absolute;
+}

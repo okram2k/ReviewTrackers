@@ -1,4 +1,4 @@
-export interface ReviewData {
+export interface ReviewState {
   id?: string;
   author?: string;
   place?: string;

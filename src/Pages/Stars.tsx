@@ -1,3 +1,5 @@
+import "./Stars.css";
+
 export default function stars({ rating = 0 }: { rating?: number }) {
   if (rating > 5) {
     rating = 5;
