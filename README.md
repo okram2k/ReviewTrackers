@@ -12,12 +12,14 @@ Upon loading on the landing screen a user can click on each of the review boxes 
 
 ## Technology
 
-This application makes use of Redux to manage states between pages in the application. The Redux store holds state for the total list of all review data, one individual review, and the state of if the application is displaying the total list or a specific review's details. Redux was chosen to be incorporated into this app to help reduce the amount of useStates and functions that would have to be passed between the different modules. The author chose not to use any state management or component libraries to do his best to match the Figma Design document as best he could.
+This application makes use of Redux to manage states between pages in the application. The Redux store holds state for the total list of all review data, one individual review, and the state of the application's navigation. Redux was chosen to be incorporated into this app to help reduce the amount of useStates and functions that would have to be passed between different modules. The author chose not to use any state management or component libraries to do his best to match the Figma Design document as best he could with CSS.
 
 ## Live Demo
 
 This application has also been uploaded to code sandbox to allow for a live web demo.
+
 [Code Sandbox](https://codesandbox.io/s/silly-bas-5mjdxe)
+
 [Live Demo](https://5mjdxe.csb.app/)
 
 Thank you again for giving me the opportunity to complete this task!
