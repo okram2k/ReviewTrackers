@@ -50,6 +50,7 @@
 
 .review-content {
   padding-top: 25px;
+  padding-bottom: 25px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -60,6 +61,7 @@
 
 .response-content {
   padding-top: 15px;
+  padding-bottom: 25px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;

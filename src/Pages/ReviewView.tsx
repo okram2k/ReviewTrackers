@@ -39,6 +39,24 @@ export default function ReviewView() {
   function clearForm() {
     updateForm(initialFormState);
   }
+  function goBack() {
+    //clear out review data when returning
+    dispatch(
+      updateReview({
+        id: "",
+        author: "",
+        place: "",
+        published_at: "",
+        rating: 0,
+        content: "",
+        response: "",
+        response_author: "",
+        response_date: "",
+      })
+    );
+    dispatch(toggleShowDetails());
+  }
+
   return review ? (
     <>
       <div className="review-page">
@@ -71,7 +89,7 @@ export default function ReviewView() {
               title="Return"
               className="return-button"
               onClick={() => {
-                dispatch(toggleShowDetails());
+                goBack();
               }}
             >
               <ReturnIcon />
@@ -131,6 +149,29 @@ export default function ReviewView() {
       </div>
     </>
   ) : (
-    <></>
+    <>
+      <div className="review-page">
+        <div className="review-card">
+          <div className="review-place">No Data</div>
+          <div className="response-return">
+            <button
+              title="Return"
+              className="return-button"
+              onClick={() => {
+                goBack();
+              }}
+            >
+              <ReturnIcon />
+            </button>
+          </div>
+          <Stars rating={0} />
+          <div className="review-content">No Data</div>
+          <div className="card-bottom">
+            <div className="author">No Data</div>
+            <div className="date">No Data</div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
